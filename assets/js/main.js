@@ -1,17 +1,16 @@
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId)
-  const nav = document.getElementById(navId)
+  const toggle = document.getElementById(toggleId);
+  const nav = document.getElementById(navId);
 
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('show-menu')
-    })
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show-menu");
+    });
   }
-}
+};
 
-showMenu('nav-toggle', 'nav-menu')
-
+showMenu("nav-toggle", "nav-menu");
 
 /*==================== DARK LIGHT THEME ====================*/
 
@@ -73,17 +72,16 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
-
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+/*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
-  const nav = document.getElementById('header');
+  const nav = document.getElementById("header");
   if (this.scrollY >= 200) {
-    nav.classList.add('scroll-header')
+    nav.classList.add("scroll-header");
   } else {
-    nav.classList.remove('scroll-header')
+    nav.classList.remove("scroll-header");
   }
 }
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener("scroll", scrollHeader);
 
 /*==================== SHOW SCROLL TOP ====================*/
 
@@ -106,15 +104,29 @@ const sr = ScrollReveal({
   reset: true,
 });
 
-sr.reveal(`.home__data, .home__img, .decoration__data, .accessory__content,`, {
-  origin: "top",
-  interval: 200,
-});
+sr.reveal(
+  `.home__data, .home__img, 
+  .decoration__data, 
+  .accessory__content,
+  .footer__content`,
+  {
+    origin: "top",
+    interval: 200,
+  }
+);
 
-sr.reveal(`.share__img, .send__content`, {
-  origin: "left",
-});
+sr.reveal(
+  `.share__img, 
+.send__content`,
+  {
+    origin: "left",
+  }
+);
 
-sr.reveal(`.share__data, .send__img`, {
-  origin: "right",
-});
+sr.reveal(
+  `.share__data, 
+.send__img`,
+  {
+    origin: "right",
+  }
+);
